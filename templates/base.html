@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css' ) }}">
+     
+</head>
+
+<body>
+    {% include "navbar.html" %}
+    <div class="row">
+        <div class="card1">
+            <div class="col-md-6 col-lg-4">
+                <div class="card" style="width: 300px;" height="80px">
+                    <img class="card-img-top img-fluid" src="/static/img/registro.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Registrarse</h5>
+                      <p class="card-text">Registra tu mascota para poder acceder a nuestros servicios, si ya estás registrado puedes actualizar tus datos</p>
+                      <a href="#" class="btn btn-primary">Registrar</a>
+                      <a href="#" class="btn btn-light">Actualizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="card2">
+            <div class="col-md-6 col-lg-4">
+                <div class="card" style="width: 300px;" height="80px">
+                    <img class="card-img-top img-fluid" src="/static/img/listar.jpg" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">Conócenos</h5>
+                    <p class="card-text">Si quieres saber más de las mascotas que tenemos registradas ingresa aquí</p>
+                    <a href="#" class="btn btn-primary">Ir</a>
+                    </div>
+                </div>
+           </div>
+       </div>
+       
+        <div class="card3">       
+            <div class="col-md-6 col-lg-4">
+                <div class="card" style="width: 300px;" height="80px">
+                    <img class="card-img-top img-fluid" src="/static/img/mascota.jpg" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">MisMascotas</h5>
+                    <p class="card-text">Si quieres saber más de tus mascotas, ingresa aquí</p>
+                    <a href="#" class="btn btn-primary">Ir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</body>
+
+</html>
