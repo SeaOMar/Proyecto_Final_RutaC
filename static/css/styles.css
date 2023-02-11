@@ -1,6 +1,6 @@
 body {
     background-image: url('https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/NVWQSYGX3RC7ZBEHLPLDVXA3PU.jpg');
-    color: #ffffff;
+    color: black;
 }
 
 .navbar {
@@ -12,27 +12,10 @@ body {
 }
 
 .navbar-brand {
-    padding-left: 620px;
+    padding-right: 400px;
     font-size: 40px;
     font-weight: bold;
-}
-.card1
-{
-    margin-left: 140px;
-    margin-right: 20px;
-    padding-right: 20px;
-}
-.card2
-{
-    margin-left: 100px;
-    margin-right: 20px;
-    padding-right: 20px;
-}
-.card3
-{
-    margin-left: 100px;
-    margin-right: 20px;
-    padding-right: 20px;
+    color:black
 }
     
 .card {
@@ -50,3 +33,4 @@ body {
 .card-link{
     color:black
 }
+
