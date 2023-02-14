@@ -56,5 +56,31 @@ def signup():
     
 @app.route("/actualizar")
 def actualizar():
+
     return render_template('actualizar.html')
+
+@app.route("/list1",methods=['GET','POST'])
+def listar1():
+    sort_by="username"
+    if request.method == "POST":
+        sort_by = request.form["sort_by"]
+    if sort_by == "username":
+        users = User.query.order_by(User.username).all()
+    elif sort_by == "fecha":
+        users = User.query.order_by(User.fecha).all()
+    elif sort_by == "nombre":
+        users = User.query.order_by(User.nombre).all()
+    elif sort_by == "raza":
+        users = User.query.order_by(User.raza).all()
+    else:
+        users = User.query.order_by(User.full_name).all()
+    print(users)
+    return render_template('listar1.html', users=users)
+
+@app.route("/search")
+def buscar():
+    form = SignupForm()
+    args = request.args
+    username = args.get('buscar')
+    user = User.query.filter_by(username=form.username.lower().first())
 

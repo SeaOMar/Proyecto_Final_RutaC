@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="dropdown">
+    <form method="POST">
+        {{ form.csrf_token }}
+        <label for="sort-by">Ordenar por:</label>
+        <select name="sort-by" id="sort-by" class="form-select">
+            <option value="username">Nombre de usuario</option>
+            <option value="fecha">Fecha de nacimiento</option>
+            <option value="nombre">Nombre mascota</option>
+            <option value="raza">Raza</option>
+            <option value="full_name">Nombre propietario</option>
+        </select>
+        <button type="submit" class="btn btn-secondary">Ordenar</button>
+
+    </form>
+</div>
+
+
+<h3> Nuestras mascotas registradas: </h3>
+<div class="containerUsers">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-8">
+            {% for user in users %}
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <h5 style="color:blueviolet" class="card-title">{{user.username}}</h5>
+                <p class="card-text"><small>Soy {{user.nombre}} y nací el {{user.fecha}} soy de raza {{user.raza}}. Yo le pertenezco a {{user.full_name}} </small></p>
+        
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+

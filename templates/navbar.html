@@ -15,11 +15,16 @@
     <a class="navbar-brand" href="#">
       <img src ="/static/img/icono.png" width="50" height="50" class="d-inline-block align-center" alt="">MyPet
     </a>
-    <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar Cliente" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    <form method="post">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+      
     </form>
-
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" id="buscar" name="buscar" placeholder="Buscar Cliente" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href=#>Buscar</button>
+    </form>
   </div>
-    
+  
 </nav>
+
+

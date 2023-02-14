@@ -9,6 +9,6 @@ class User(db.Model):
     nombre = db.Column(db.String(20), nullable=True)
     raza = db.Column(db.String(20), nullable=True)
     fecha = db.Column(db.String(20), nullable=False)
-    full_name = db.Column(db.String(20), nullable=True)
+    full_name = db.Column(db.String(200), nullable=True)
     DNI = db.Column(db.String(20), nullable=True)
     

@@ -10,3 +10,4 @@ class SignupForm(FlaskForm):
     full_name = StringField("Nombre Completo del propietario", validators=[DataRequired()])
     DNI =StringField("DNI", validators=[DataRequired(), Length(min=8, max=8,message="El DNI tiene 8 digitos")])
     submit = SubmitField('Registrarse')
+
